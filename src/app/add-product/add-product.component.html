@@ -1,0 +1,23 @@
+<div class="p-3">
+  <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <table class="table">
+      <tbody> <!-- Ajoutez tbody pour corriger la structure HTML -->
+      <tr>
+        <td>
+          <input class="form-control" formControlName="name" placeholder="Name" />
+        </td>
+        <td>
+          <input class="form-control" formControlName="price" placeholder="Price" type="number" />
+        </td>
+        <td>
+          <input type="checkbox" class="form-check-input" formControlName="selected" />
+          <label class="form-check-label">Selected</label>
+        </td>
+        <td>
+          <button class="btn btn-success" type="submit">Save</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

@@ -9,19 +9,28 @@ import {MatTableModule} from "@angular/material/table";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListProductsComponent } from './components/list-products/list-products.component';
+import { AllProductsComponent } from './all-products/all-products.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    AllProductsComponent,
+    DashboardComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+
   ],
   providers: [
     provideClientHydration(),

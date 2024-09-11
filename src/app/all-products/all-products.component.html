@@ -1,8 +1,5 @@
 <div class="p-3">
-  <ul class="nav nav-pills">
-    <li class="btn p-3 m-3">Selected Products: {{selectedProducts()}}</li>
-    <li class="btn p-3 m-3">Total: {{total()}}</li>
-  </ul>
+
   <table class="table align-middle">
     <thead>
     <tr>
@@ -10,6 +7,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Selected</th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -22,6 +20,7 @@
           {{ product.selected ? 'Selected' : 'Not Selected' }}
         </button>
       </td>
+      <td ><button class="btn btn-outline-danger" (click)="deleteProduct(product)">Delete</button></td>
     </tr>
     </tbody>
   </table>
